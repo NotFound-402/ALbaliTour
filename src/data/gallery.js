@@ -75,8 +75,8 @@ export const galleryData = [
     id: "Shopping-Time",
     images: [
       "https://destinationlesstravel.com/wp-content/uploads/2024/02/Silver-jewlery-in-Bali-960x640.jpg", 
-      "https://as2.ftcdn.net/v2/jpg/07/89/73/79/1000_F_789737920_v9ae3c9o9vCAZdOpXnc3H5IHRNCs4sZO.jpg",
-      "https://www.balitouristic.com/wp-content/uploads/2025/06/tohpati-village.webp"
+      "https://thumbs.dreamstime.com/z/jewellery-display-ubud-indonesia-september-colorful-beautiful-market-bali-192957466.jpg",
+      "https://www.ubudcenter.com/wp-content/uploads/2023/01/patung2.jpg"
     ]
   },  
   {
