@@ -9,7 +9,7 @@ export default function Navbar() {
   const navs = [
     { name: 'Home', path: '/' },
     { name: 'Tours', path: '/tours' },
-    { name: 'Destinations', path: '/destinations' },
+    { name: 'Bali Airport', path: '/airport' },
     { name: 'Activities', path: '/activities' },
   ];
 
@@ -25,7 +25,7 @@ export default function Navbar() {
               {nav.name}
             </Link>
           ))}
-          <button onClick={() => openWA('Halo Bali Explore 👋\nSaya ingin bertanya tentang layanan tour Anda.')} className="btn btn-primary" style={{padding: '8px 20px'}}>Book via WA</button>
+          <button onClick={() => openWA('Halo Bali Explore \nSaya ingin bertanya tentang layanan tour Anda.')} className="btn btn-primary" style={{padding: '8px 20px'}}>Book via WA</button>
         </div>
         <button
           className={`hamburger ${isOpen ? 'is-open' : ''}`}

@@ -5,6 +5,7 @@ export const toursData = [
     duration: "1 Day",
     route: "Satria Agrotourism • Ubud Palace • Monkey Forest",
     price: "850.000",
+    description: "A cultural day trip through Ubud's highlights — traditional villages, rice terraces, and the sacred Monkey Forest.",
     image: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=800&q=80",
     bestSeller: true,
     itinerary: [
@@ -22,6 +23,7 @@ export const toursData = [
     duration: "1 Day",
     route: "Ubud ATV Quad Bike • Jungle Adventure",
     price: "Single: 1.300.000/Pax Tandem: 1.700.000/2 Pax",
+    description: "Off-road ATV adventure in Ubud's jungle — adrenaline, scenic tracks and an active outdoor experience.",
     image: "https://balikdektour.com/images/tours/ubud-atv-quad-bike-01.jpg",
     bestSeller: false,
     itinerary: [
@@ -40,7 +42,8 @@ export const toursData = [
     duration: "1 Day",
     route: "Ubud Rafting • Jungle Adventure",
     price: "Single: 750.000/Pax",
-    image: "https://balikdektour.com/images/tours/ubud-rafting-01.jpg",
+    description: "White-water rafting through lush river gorges — fun, safe, and a great way to experience Bali's nature.",
+    image: "https://nagikubalitour.com/wp-content/uploads/2025/04/surya-rafting-2.jpg",
     bestSeller: false,
     itinerary: [
       { time: "08:00 AM", activity: "Hotel Pick-up" },
@@ -58,7 +61,8 @@ export const toursData = [
     duration: "1 Day",
     route: "Ubud UTV Buggy • Jungle Adventure",
     price: "Single: 1.000.000/Pax Tandem: 1.400.000/2 Pax",
-    image: "https://balikdektour.com/images/tours/ubud-utv-buggy-01.jpg",
+    description: "Drive robust UTV buggies across scenic jungle trails and muddy tracks for a rugged outdoor thrill.",
+    image: "https://jwc.gotra-resources.my.id/web-upload/1770699530-product_image-10-02-2026-QC1UuqzanhOVZsmR.jpg",
     bestSeller: false,
     itinerary: [
       { time: "08:00 AM", activity: "Hotel Pick-up" },
@@ -76,7 +80,8 @@ export const toursData = [
     duration: "1 Day",
     route: "Water Sport Benoa • Beach Adventure",
     price: "390.000 - 1.550.000/Pax",
-    image: "https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=800&q=80",
+    description: "Flexible watersport options at Benoa Beach — parasailing, jet ski, banana boat and more for all ages.",
+    image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/11/7b/ba/9b.jpg",
     bestSeller: false,
     choose_adventure: [
       { time: "Parasailing Adventure", activity: "750.000/Pax" },
@@ -104,7 +109,8 @@ export const toursData = [
     duration: "1 Day",
     route: "Kintamani",
     price: "1.600.000",
-    image: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80",
+    description: "Early morning jeep ride to watch the spectacular mountain sunrise over Kintamani and Mount Batur.",
+    image: "https://quadbikebali.com/wp-content/uploads/2024/03/WhatsApp-Image-2024-03-14-at-14.53.14.jpeg",
     bestSeller: false,
     itinerary: [
       { time: "02:00 AM", activity: "Hotel Pick-up" },
@@ -122,7 +128,8 @@ export const toursData = [
     duration: "1 Day",
     route: "Bali Zoo Park",
     price: "280.000/Child 395.000/Adult",
-    image: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80",
+    description: "Family-friendly visit to Bali Zoo with animal encounters, shows and interactive exhibits.",
+    image: "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/xepaarhevbitjbgbbdjf/BaliZoo.jpg",
     bestSeller: false,
     itinerary: []
   },
@@ -132,7 +139,8 @@ export const toursData = [
     duration: "1 Day",
     route: "Lovina Beach",
     price: "1.600.000",
-    image: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80",
+    description: "Sunrise dolphin watching trip from Lovina — early start, calm seas and great wildlife viewing.",
+    image: "https://portstjoeresort.com/wp-content/uploads/2024/01/Everglades-City-Dolphin-Watching-Tours-1024x585.jpg",
     bestSeller: false,
     itinerary: [
       { time: "04:00 AM", activity: "Hotel Pick-up" },
@@ -148,7 +156,8 @@ export const toursData = [
     title: "Shopping Time",
     duration: "1 Day",
     route: "Ubud",  
-    image: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80",
+    description: "A relaxed shopping excursion across Ubud's galleries, silver workshops, and local craft markets.",
+    image: "https://destinationlesstravel.com/wp-content/uploads/2024/02/Silver-jewlery-in-Bali-960x640.jpg",
     bestSeller: false,
     itinerary: [
     { time: "Jewelery Shop", activity: "" },
@@ -163,8 +172,10 @@ export const toursData = [
     id: "spa package",
     title: "balinese Massage & Spa",
     duration: "1 Day",
+    route: "-",
     price: "500.000",
-    image: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80",
+    description: "Relaxing Balinese massage and spa package to rejuvenate after travel — traditional treatments included.",
+    image: "https://whatsnewindonesia.com/sites/default/files/inline-images/Spa%20Uluwatu.jpeg",
     bestSeller: false,
     itinerary: [
     { time: "Booking Time", activity: "Hotel Pic-Up Schedule" },
@@ -173,26 +184,6 @@ export const toursData = [
     { time: "Selection", activity: "Choose the aromatic oil to use" },
     { time: "The Ritual", activity: "Start for Spa & Massage session" },
     { time: "End", activity: "Return The Hotel" }
-    ]
-  },
-  {
-    id: "airport transfer",
-    title: "Bali Airport Transfer",
-    duration: "1 Day",
-    route: "Nusa Dua, Kuta, Seminyak, Legian, Sanur, Ubud and many more",
-    price: "280.000/Child 395.000/Adult",
-    image: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80",
-    bestSeller: false,
-    itinerary: [
-      { time: "Airport To Ubud", activity: "450.000" },
-      { time: "Airport To Uluwatu", activity: "350.000" },
-      { time: "Airport To Jimbaran", activity: "200.000" },
-      { time: "Airport To Canggu", activity: "350.000" },
-      { time: "Airport To Sanur", activity: "300.000" },
-      { time: "Airport To Legian", activity: "250.000" },
-      { time: "Airport To Kuta", activity: "225.000" },
-      { time: "Airport To Nusa Dua", activity: "250.000" },
-      { time: "Airport To Seminyak", activity: "250.000" },
     ]
   },
 ];

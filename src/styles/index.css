@@ -9,7 +9,7 @@
 }
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
-h1, h2, h3, h4 { color: var(--primary); font-weight: 600; line-height: 1.3; }
+h2, h3, h4 { color: var(--primary); font-weight: 600; line-height: 1.3; }
 h2 { font-size: 2.5rem; margin-bottom: 1rem; text-align: center; }
 p { color: var(--text-gray); margin-bottom: 1rem; }
 a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
@@ -196,6 +196,18 @@ img { max-width: 100%; height: auto; display: block; }
 .form-group { margin-bottom: 20px; text-align: left; }
 .form-group label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 0.95rem; }
 .form-control { width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
+
+/* Select & Airport card tweaks */
+select.form-control, select {
+    appearance: none; -webkit-appearance: none; -moz-appearance: none;
+    background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 24 24"><path fill="%23333" d="M7 10l5 5 5-5z"/></svg>') no-repeat calc(100% - 12px) center/12px 12px;
+}
+
+.airport-card { background: var(--bg-white); border-radius: 12px; box-shadow: var(--shadow); padding: 18px; display: flex; gap: 16px; align-items: flex-start; }
+.airport-card img { width: 180px; height: 110px; object-fit: cover; border-radius: 8px; }
+.airport-card h3 { margin: 0 0 6px 0; }
+.airport-card ul { margin: 8px 0 0 18px; padding: 0; }
+.airport-card li { margin-bottom: 6px; font-size: 0.95rem; color: var(--text-dark); }
 
 /* Footer */
 footer { background-color: var(--primary); color: var(--bg-white); padding: 60px 0 20px; }

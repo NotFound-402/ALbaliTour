@@ -14,7 +14,7 @@ export default function Footer() {
             <h4 style={{color: 'var(--accent)', marginBottom: '15px'}}>Quick Links</h4>
             <ul className="footer-links">
               <li><Link to="/tours">Tours</Link></li>
-              <li><Link to="/destinations">Destinations</Link></li>
+              <li><Link to="/airport">Bali Airport</Link></li>
             </ul>
           </div>
           <div>

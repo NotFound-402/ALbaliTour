@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { toursData } from '../data/data';
+import { getTourImage } from '../utils/googleMaps';
+import useGooglePlacePhoto from '../hooks/useGooglePlacePhoto';
+
+function TourThumb({ tour, alt }) {
+  const fallback = getTourImage(tour) || tour.image;
+  const src = useGooglePlacePhoto({ gm_photo_ref: tour.gm_photo_ref, gm_place_name: tour.gm_place_name, fallback, maxWidth: 800 });
+  return <img src={src || fallback} alt={alt} />;
+}
 import { openWA } from '../utils/whatsapp';
 
 const fadeUp = {
@@ -39,7 +47,7 @@ export default function Tours() {
               custom={index}
               whileHover={{ y: -10 }}
             >
-              <div className="tour-img"><img src={tour.image} alt={tour.title} /></div>
+              <div className="tour-img"><TourThumb tour={tour} alt={tour.title} /></div>
               <div className="tour-content">
                 <h3 className="tour-title">{tour.title}</h3>
                 <div className="tour-meta">

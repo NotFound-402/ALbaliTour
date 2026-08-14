@@ -1,7 +1,17 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { toursData } from '../data/data';
+import { airportsData } from '../data/airports';
+import AirportCard from '../components/AirportCard';
+import { getTourImage } from '../utils/googleMaps';
+import useGooglePlacePhoto from '../hooks/useGooglePlacePhoto';
 import { openWA } from '../utils/whatsapp';
+
+function TourCardImage({ tour, altText }) {
+  const fallback = getTourImage(tour) || tour.image;
+  const src = useGooglePlacePhoto({ gm_photo_ref: tour.gm_photo_ref, gm_place_name: tour.gm_place_name, fallback, maxWidth: 800 });
+  return <img src={src || fallback} alt={altText} />;
+}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -17,6 +27,8 @@ const fadeUp = {
 };
 
 export default function Home() {
+  const airport = airportsData && airportsData.length ? airportsData[0] : null;
+
   return (
     <>
       <motion.header
@@ -107,7 +119,7 @@ export default function Home() {
               >
                 <div className="tour-img">
                   {tour.bestSeller && <div className="tour-badge">Best Seller</div>}
-                  <img src={tour.image} alt={tour.title} />
+                  <TourCardImage tour={tour} altText={tour.title} />
                 </div>
                 <div className="tour-content">
                   <h3 className="tour-title">{tour.title}</h3>
@@ -125,6 +137,25 @@ export default function Home() {
           <motion.div className="text-center" style={{ marginTop: '40px' }} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.5, ease: 'easeOut' }}>
             <Link to="/tours" className="btn btn-primary">View All Tours</Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Airport Transfer feature */}
+      <section className="section">
+        <div className="container">
+          <motion.h2 initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} style={{ textAlign: 'center' }}>Airport Transfer</motion.h2>
+          <div style={{ maxWidth: 900, margin: '24px auto' }}>
+            {airport ? (
+              <>
+                <AirportCard tour={airport} />
+                <div style={{ marginTop: 12 }}>
+                  <Link to="/airport" className="btn btn-primary">More Airport Options</Link>
+                </div>
+              </>
+            ) : (
+              <p>No airport transfer data available.</p>
+            )}
+          </div>
         </div>
       </section>
 
@@ -153,7 +184,7 @@ export default function Home() {
                   <div className="form-group"><label>Date</label><input type="date" name="date" className="form-control" required /></div>
                   <div className="form-group"><label>Guests</label><input type="number" name="guests" className="form-control" required /></div>
                 </div>
-                <div className="form-group"><label>Destinations</label><input type="text" name="dest" className="form-control" /></div>
+                <div className="form-group"><label>Destination / Area</label><input type="text" name="dest" className="form-control" /></div>
                 <div className="form-group"><label>Message</label><textarea name="msg" className="form-control" style={{ height: '100px' }}></textarea></div>
                 <motion.button type="submit" className="btn btn-wa" style={{ width: '100%' }} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   Send to WhatsApp
