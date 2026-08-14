@@ -58,9 +58,9 @@ export const galleryData = [
   {
     id: "dolpin",
     images: [
-      "https://insidershiltonhead.com/wp-content/uploads/2025/01/best-dolphin-watching-Hilton-Head.jpg",
-      "https://www.marinaloop.com/images/dolphins.png",
-      "https://www.tybeeisland.com/wp-content/uploads/2023/08/tybee-dolphin-tour-things-to-do.png"
+      "https://cdn.forevervacation.com/uploads/attraction/lovina-beach-2910.jpeg",
+      "https://lovina-bali.com/wp-content/uploads/2025/03/lovina-dolphins.webp",
+      "https://visitbalitour.com/wp-content/uploads/2022/05/lovina-dolphin.jpg"
     ]
   },
   {

@@ -155,6 +155,7 @@ export const toursData = [
     id: "Shopping-Time",
     title: "Shopping Time",
     duration: "1 Day",
+    price: "-",
     route: "Ubud",  
     description: "A relaxed shopping excursion across Ubud's galleries, silver workshops, and local craft markets.",
     image: "https://destinationlesstravel.com/wp-content/uploads/2024/02/Silver-jewlery-in-Bali-960x640.jpg",
