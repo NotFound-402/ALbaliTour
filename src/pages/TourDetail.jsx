@@ -4,6 +4,7 @@ import { toursData } from '../data/data';
 import { priceIncluded } from '../data/price-included';
 import { excluded } from '../data/excluded';
 import { openWA } from '../utils/whatsapp';
+import { galleryData } from '../data/gallery';
 
 export default function TourDetail() {
   const { id } = useParams();
@@ -39,7 +40,7 @@ export default function TourDetail() {
 
               {tour.itinerary && tour.itinerary.length > 0 && (
                 <>
-                  <h3 style={{ margin: '30px 0 15px' }}>Itinerary</h3>
+                  <h3 style={{ margin: '30px 0 15px' }}>Choose Your Adventure</h3>
                   <ul style={{ listStyle: 'none', marginBottom: '30px' }}>
                     {tour.itinerary.map((item, idx) => (
                       <motion.li
@@ -76,6 +77,15 @@ export default function TourDetail() {
                 <i className="fab fa-whatsapp"></i> Book This Tour via WhatsApp
               </motion.button>
             </motion.div>
+            <div className="gallery">
+              <h3 style={{ marginBottom: '15px' }}>Gallery</h3>
+              <div className="gallery-grid">
+                {galleryData[0]?.images.map((image, idx) => (
+                  <img key={idx} src={image} alt={tour.title} />
+                ))}
+              </div>
+            </div>
+
             <div className="price-list-wrap">
               <div className="price-box included-box">
                 <h3>What's Included</h3>
