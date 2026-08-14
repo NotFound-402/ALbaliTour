@@ -277,10 +277,8 @@ footer { background-color: var(--primary); color: var(--bg-white); padding: 60px
         align-items: stretch;
         gap: 12px;
     }
-    .hero-btns .btn,
-    .btn {
-        width: 90%;
-    }
+    /* Only make hero buttons full-width on mobile; keep other buttons natural size */
+    .hero-btns .btn { width: 100%; }
 
     .grid-4,
     .grid-3,
@@ -292,15 +290,19 @@ footer { background-color: var(--primary); color: var(--bg-white); padding: 60px
     .feature-card,
     .tour-card,
     .form-card,
-    .detail-content,
-    .detail-sidebar {
+    .detail-content {
         padding-left: 18px;
         padding-right: 18px;
     }
+    /* Make sidebar flow naturally on small screens */
+    .detail-sidebar { padding-left: 18px; padding-right: 18px; position: static; top: auto; }
 
     .detail-content { padding-top: 24px; padding-bottom: 24px; }
     .detail-sidebar { padding-top: 20px; padding-bottom: 20px; }
     .tour-content { padding: 20px; }
+
+    /* Reduce tour image height on mobile for better layout */
+    .tour-img { height: 160px; }
 
     .detail-grid { grid-template-columns: 1fr; }
     .form-card { padding: 24px 18px; }
@@ -311,6 +313,10 @@ footer { background-color: var(--primary); color: var(--bg-white); padding: 60px
 .gallery-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
+
+    /* Airport card stack on mobile */
+    .airport-card { flex-direction: column; align-items: stretch; }
+    .airport-card img { width: 100%; height: auto; margin-bottom: 12px; }
 
 .gallery-grid img {
     height: 200px;
