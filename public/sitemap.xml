@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.com/</loc></url>
-  <url><loc>https://example.com/bali-tour</loc></url>
-  <url><loc>https://example.com/ubud-tour</loc></url>
-  <url><loc>https://example.com/kintamani-tour</loc></url>
-  <url><loc>https://example.com/uluwatu-tour</loc></url>
-  <url><loc>https://example.com/nusa-penida-tour</loc></url>
-  <url><loc>https://example.com/bali-airport-transfer</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/tours</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/airport</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/about</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/faq</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/contact</loc></url>
+  <!-- tour detail pages -->
+  <url><loc>https://albalitour.karyaweb.my.id/tours/ubud-cultural-tour</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/tours/ubud-adventure-tour</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/tours/ubud-rafting</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/tours/ubud-utv-buggy</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/tours/water-sport-benoa</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/tours/jeep-sunrise</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/tours/Bali-Zoo</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/tours/dolpin</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/tours/Shopping-Time</loc></url>
+  <url><loc>https://albalitour.karyaweb.my.id/tours/spa%20package</loc></url>
 </urlset>

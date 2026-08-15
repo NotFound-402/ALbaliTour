@@ -2,12 +2,14 @@ import { motion } from 'motion/react';
 import { airportsData } from '../data/airports';
 import AirportCard from '../components/AirportCard';
 import { openWA } from '../utils/whatsapp';
+import SEO from '../SEO';
 
 export default function Airport() {
   const airportTour = airportsData.find(t => t.id === 'airport transfer') || airportsData[0];
 
   return (
     <div>
+      <SEO title="Bali Airport Transfer | AL Bali Tour" description={airportTour?.description || 'Airport transfer services in Bali.'} path="/airport" image={airportTour?.image || '/og-image.jpg'} />
       <motion.div className="detail-hero" style={{ backgroundImage: `url(${airportTour?.image || ''})` }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
         <div className="container">
           <h1 style={{ color: '#fff' }}>{airportTour ? 'Bali Airport Transfer' : 'Airport Services'}</h1>

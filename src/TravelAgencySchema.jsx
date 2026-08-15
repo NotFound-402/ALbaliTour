@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-const SITE_URL = "https://example.com";
+const SITE_URL = "https://albalitour.karyaweb.my.id";
 
 export default function TravelAgencySchema() {
   const data = {
@@ -8,15 +8,16 @@ export default function TravelAgencySchema() {
     "@type": "TravelAgency",
     name: "AL Bali Tour",
     url: SITE_URL,
-    description:
-      "Private Bali tours, custom Bali tour packages and airport transfers.",
+    telephone: "+62895326173476",
+    description: "Private Bali tours, custom Bali tour packages and airport transfers.",
     areaServed: {
       "@type": "Place",
-      name: "Bali, Indonesia",
+      name: "Bali",
     },
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Bali",
+      addressLocality: "Gianyar",
+      addressRegion: "Bali",
       addressCountry: "ID",
     },
   };

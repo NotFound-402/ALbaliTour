@@ -10,6 +10,7 @@ function TourThumb({ tour, alt }) {
   return <img src={src || fallback} alt={alt} />;
 }
 import { openWA } from '../utils/whatsapp';
+import SEO from '../SEO';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -27,6 +28,7 @@ const fadeUp = {
 export default function Tours() {
   return (
     <div style={{ paddingTop: '120px', paddingBottom: '80px', background: 'var(--bg-white)', minHeight: '100vh' }}>
+      <SEO title="All Bali Tours | AL Bali Tour" description="Browse our private Bali tours and activities in Bali." path="/tours" />
       <div className="container">
         <motion.h1
           initial={{ opacity: 0, y: 18 }}

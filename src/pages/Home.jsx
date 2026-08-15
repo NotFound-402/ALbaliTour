@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
+import SEO from '../SEO';
 import { toursData } from '../data/data';
 import { airportsData } from '../data/airports';
 import AirportCard from '../components/AirportCard';
@@ -31,6 +32,11 @@ export default function Home() {
 
   return (
     <>
+      <SEO
+        title="AL Bali Tour — Explore Bali"
+        description="Explore Bali with local private tours, custom itineraries and airport transfers."
+        path="/"
+      />
       <motion.header
         className="hero"
         initial={{ opacity: 0 }}

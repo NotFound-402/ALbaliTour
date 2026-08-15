@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-const SITE_URL = "https://example.com";
+const SITE_URL = "https://albalitour.karyaweb.my.id";
 
 export default function SEO({
   title = "Bali Private Tour & Travel | AL Bali Tour",

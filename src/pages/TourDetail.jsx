@@ -8,6 +8,7 @@ import { openWA } from '../utils/whatsapp';
 import { galleryData } from '../data/gallery';
 import { getTourImage } from '../utils/googleMaps';
 import useGooglePlacePhoto from '../hooks/useGooglePlacePhoto';
+import SEO from '../SEO';
 
 function ChooseAdventureSelect({ tour, value, onChange }) {
   return (
@@ -46,6 +47,7 @@ export default function TourDetail() {
 
   return (
     <>
+      <SEO title={`${tour.title} | AL Bali Tour`} description={tour.description} path={`/tours/${tour.id}`} image={heroImage || tour.image} />
       <motion.div
         className="detail-hero"
         style={{ backgroundImage: `url(${heroImage})` }}
