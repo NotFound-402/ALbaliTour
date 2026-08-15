@@ -11,7 +11,6 @@ export default function Navbar() {
     { name: 'Home', path: '/' },
     { name: 'Tours', path: '/tours' },
     { name: 'Bali Airport', path: '/airport' },
-    { name: 'Activities', path: '/activities' },
   ];
 
   return (

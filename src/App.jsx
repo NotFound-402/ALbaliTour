@@ -20,7 +20,6 @@ function App() {
         <Route path="/tours" element={<Tours />} />
         <Route path="/tours/:id" element={<TourDetail />} />
         <Route path="/airport" element={<Airport />} />
-        <Route path="/activities" element={<PlaceholderPage title="Activities" />} />
         <Route path="/about" element={<PlaceholderPage title="About Us" />} />
         <Route path="/faq" element={<PlaceholderPage title="FAQ" />} />
         <Route path="/contact" element={<PlaceholderPage title="Contact" />} />
