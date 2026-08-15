@@ -20,7 +20,7 @@ export default function Footer() {
           <div>
             <h4 style={{color: 'var(--accent)', marginBottom: '15px'}}>Connect</h4>
             <ul className="footer-links">
-              <li><a href="#!" onClick={(e) => { e.preventDefault(); openWA('Halo Bali Explore 👋'); }}><i className="fab fa-whatsapp"></i> WhatsApp</a></li>
+              <li><a href="#!" onClick={(e) => { e.preventDefault(); openWA('Halo Bali Explore'); }}><i className="fab fa-whatsapp"></i> WhatsApp</a></li>
               <li><a href="#!"><i className="fab fa-instagram"></i> Instagram</a></li>
             </ul>
           </div>

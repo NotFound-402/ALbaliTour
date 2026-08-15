@@ -31,6 +31,10 @@ img { max-width: 100%; height: auto; display: block; }
 .btn-wa { background-color: var(--wa-green); color: var(--bg-white); font-weight: 600; }
 .btn-wa:hover { background-color: #1ebe57; transform: translateY(-2px); box-shadow: var(--shadow); }
 
+/* subtle button elevation and transitions */
+.btn { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.btn:active { transform: translateY(1px) scale(0.995); }
+
 /* Navbar */
 .navbar {
     background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
@@ -209,6 +213,33 @@ select.form-control, select {
 .airport-card ul { margin: 8px 0 0 18px; padding: 0; }
 .airport-card li { margin-bottom: 6px; font-size: 0.95rem; color: var(--text-dark); }
 
+.car-model-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 12px;
+}
+.car-model-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid transparent;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.car-model-card:hover { transform: translateY(-6px); }
+.car-model-card.selected { border-color: var(--accent); box-shadow: 0 14px 40px rgba(0,0,0,0.08); }
+.car-model-card img { display: block; width: 100%; height: 140px; object-fit: cover; }
+
+/* Slightly larger card body spacing */
+.car-model-card > div { padding: 12px; }
+
+@media (max-width: 480px) {
+    .car-model-grid { grid-template-columns: 1fr; gap: 12px; }
+    .car-model-card img { height: 120px; }
+}
+
 /* Footer */
 footer { background-color: var(--primary); color: var(--bg-white); padding: 60px 0 20px; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
@@ -222,6 +253,14 @@ footer { background-color: var(--primary); color: var(--bg-white); padding: 60px
     display: flex; justify-content: center; align-items: center; font-size: 2rem;
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 9999;
 }
+
+/* gentle pulse for floating WA button */
+@keyframes wa-pulse {
+    0% { box-shadow: 0 4px 15px rgba(37,211,102,0.18); }
+    50% { box-shadow: 0 8px 30px rgba(37,211,102,0.22); }
+    100% { box-shadow: 0 4px 15px rgba(37,211,102,0.18); }
+}
+.floating-wa { animation: wa-pulse 3.5s ease-in-out infinite; }
 
 /* Responsive */
 @media (max-width: 768px) {

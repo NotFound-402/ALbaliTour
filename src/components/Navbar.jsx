@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'motion/react';
 import { openWA } from '../utils/whatsapp';
 
 export default function Navbar() {
@@ -21,11 +22,13 @@ export default function Navbar() {
         </Link>
         <div className={`nav-links ${isOpen ? 'active' : ''}`}>
           {navs.map(nav => (
-            <Link key={nav.name} to={nav.path} className={location.pathname === nav.path ? 'active' : ''} onClick={() => setIsOpen(false)}>
-              {nav.name}
-            </Link>
+            <motion.div key={nav.name} whileHover={{ y: -3 }} whileTap={{ scale: 0.98 }} style={{ display: 'inline-block' }}>
+              <Link to={nav.path} className={location.pathname === nav.path ? 'active' : ''} onClick={() => setIsOpen(false)}>
+                {nav.name}
+              </Link>
+            </motion.div>
           ))}
-          <button onClick={() => openWA('Halo Bali Explore \nSaya ingin bertanya tentang layanan tour Anda.')} className="btn btn-primary" style={{padding: '8px 20px'}}>Book via WA</button>
+          <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }} onClick={() => openWA('Halo Bali Explore \nSaya ingin bertanya tentang layanan tour Anda.')} className="btn btn-primary" style={{padding: '8px 20px'}}>Book via WA</motion.button>
         </div>
         <button
           className={`hamburger ${isOpen ? 'is-open' : ''}`}
