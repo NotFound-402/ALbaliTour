@@ -4,7 +4,7 @@ export const airportsData = [
     title: "Bali Airport Transfer",
     duration: "1 Day",
     route: "Nusa Dua, Kuta, Seminyak, Legian, Sanur, Ubud and many more",
-    price: "280.000/Child 395.000/Adult",
+    price: "250.000",
     image: "https://travelpointbali.com/wp-content/uploads/2023/06/AIRPORT.png",
     bestSeller: false,
     itinerary: [
