@@ -15,6 +15,7 @@ export default function Footer() {
             <ul className="footer-links">
               <li><Link to="/tours">Tours</Link></li>
               <li><Link to="/airport">Bali Airport</Link></li>
+              <li><Link to="/public/sitemap.xml"></Link></li>
             </ul>
           </div>
           <div>
