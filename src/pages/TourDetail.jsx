@@ -3,6 +3,8 @@ import { useParams, Navigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { toursData } from '../data/data';
 import { priceIncluded } from '../data/price-included';
+import { perTourIncluded } from '../data/perTourIncluded';
+import { perTourExcluded } from '../data/perTourExcluded';
 import { excluded } from '../data/excluded';
 import { openWA } from '../utils/whatsapp';
 import { galleryData } from '../data/gallery';
@@ -141,21 +143,47 @@ export default function TourDetail() {
             </div>
 
             <div className="price-list-wrap">
-              <div className="price-box included-box">
-                <h3>What's Included</h3>
-                <ul>
-                  {priceIncluded.map((item, idx) => (
-                    <li key={idx}><span className="price-check">✓</span> {item}</li>
-                  ))}
-                </ul>
-              </div>
+                <div className="price-box included-box">
+                  <h3>What's Included</h3>
+                  <ul>
+                    {(() => {
+                      const combined = [...priceIncluded];
+                      const perIncluded = perTourIncluded[tour.id] || [];
+                      perIncluded.forEach(i => { if (!combined.includes(i)) combined.push(i); });
+                      return combined.map((item, idx) => (
+                        <li key={idx}><span className="price-check">✓</span> {item}</li>
+                      ));
+                    })()}
+                  </ul>
+                </div>
 
               <div className="price-box excluded-box">
                 <h3>What's Excluded</h3>
                 <ul>
-                  {excluded.map((item, idx) => (
-                    <li key={idx}><span className="price-check">✕</span> {item}</li>
-                  ))}
+                  {(() => {
+                    const combinedIncluded = [...priceIncluded];
+                    const perIncluded = perTourIncluded[tour.id] || [];
+                    perIncluded.forEach(i => { if (!combinedIncluded.includes(i)) combinedIncluded.push(i); });
+                    // also consider any per-tour excluded additions
+                    const extraExcluded = perTourExcluded[tour.id] || [];
+                    const allExcluded = [...excluded, ...extraExcluded];
+                    // normalize helper to compare strings loosely
+                    const tokenize = (s) => (s || '').toString().toLowerCase().match(/[a-z0-9]+/g) || [];
+                    const normalizeToken = (t) => t.replace(/s$/,'');
+                    const includedTokens = new Set();
+                    combinedIncluded.forEach(ci => tokenize(ci).forEach(t => includedTokens.add(normalizeToken(t))));
+                    const filtered = allExcluded.filter(e => {
+                      const toks = tokenize(e).map(normalizeToken).filter(Boolean);
+                      if (toks.length === 0) return true;
+                      const matchCount = toks.reduce((c, t) => c + (includedTokens.has(t) ? 1 : 0), 0);
+                      // if all tokens match, or at least two tokens match, consider it included
+                      const consideredIncluded = (matchCount === toks.length) || (toks.length >= 2 && matchCount >= 2);
+                      return !consideredIncluded;
+                    });
+                    return filtered.map((item, idx) => (
+                      <li key={idx}><span className="price-check">✕</span> {item}</li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
