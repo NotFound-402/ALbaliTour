@@ -79,7 +79,7 @@ export const toursData = [
     title: "Water Sport Benoa",
     duration: "1 Day",
     route: "Water Sport Benoa • Beach Adventure",
-    price: "390.000 - 1.550.000/21,84 - 86,57 USD/Pax",
+    price: "500.000-800.000/28,00-44,44 USD",
     description: "Flexible watersport options at Benoa Beach — parasailing, jet ski, banana boat and more for all ages.",
     image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/11/7b/ba/9b.jpg",
     bestSeller: false,
